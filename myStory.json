@@ -1,0 +1,416 @@
+{
+    "Title": "The Twisted Mansion",
+    "Credits": "Modified from original by Adam Smith",
+    "InitialLocation": "Front Door",
+    "Locations": {
+        "Front Door": {
+            "Body": "You are now at the front door of this abandoned house. The wooden door is worn and covered in cobwebs. You can either enter the living room of the house or explore the front yard. ",
+            "Choices": [
+                {
+                    "Text": "Living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "Front yard",
+                    "Target": "Front Yard"
+                }
+            ]
+        },
+        "Front Yard": {
+            "Body": "The front yard is empty. You can only hear wind blowing in the night. You notice something shining in the bushes. You are able to check it out or go back to the living room.",
+            "Item": {
+                "Name": "Flashlight",
+                "Effect": "Now you can see in dark areas."
+            },
+            "Choices": [
+                {
+                    "Text": "Living Room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Living Room": {
+            "Body": "You're standing in the Living room of the house, you are surrounded by furniture. There's a thick layer of dust on all the furniture. You can either go to the Back Door of the house, enter the Kitchen, or go to the basement Door.",
+            "Choices": [
+                {
+                    "Text": "Back Door",
+                    "Target": "Back Door"
+                },
+                {
+                    "Text": "Kitchen",
+                    "Target": "Kitchen"
+                },
+                {
+                    "Text": "Basement Door",
+                    "Target": "Basement Entry"
+                }
+    
+            ]
+        },
+        "Basement Entry": {
+            "Body": "The entrance to the basement is locked with a padlock. You need a key to open it.",
+            "Choices": [
+                {
+                    "Text": "Unlock the basement door",
+                    "Target": "Basement Stairs",
+                    "RequiresItem": "Basement Key",
+                    "UsesItem": "Basement Key",
+                    "ItemEffect": "The key fits perfectly and the padlock opens with a click."
+                },
+                {
+                    "Text": "Go back to the living room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Back Door": {
+            "Body": "You try to open the back door but there is a lock on it. You need to find a key to open it.",
+            "Choices": [
+                {
+                    "Text": "Unlock the back door",
+                    "Target": "Backyard",
+                    "RequiresItem": "Back Door Key",
+                    "UsesItem": "Back Door Key",
+                    "ItemEffect": "You unlock the door and push it open, feeling a cool breeze from outside."
+                },
+                {
+                    "Text": "Go back to the living room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "You're standing in the kitchen. It looks very empty with no pots, pans, or food for some reason. You spot a small key on the counter.",
+            "Item": {
+                "Name": "Back Door Key",
+                "Effect": "This looks like it might open the back door."
+            },
+            "Choices": [
+                {
+                    "Text": "Look in the cabinets",
+                    "Target": "Kitchen Cabinets"
+                },
+                {
+                    "Text": "Go back to the living room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Kitchen Cabinets": {
+            "Body": "You open the cabinets and find them mostly empty. In one cabinet, you find an old radio covered in dust.",
+            "Choices": [
+                {
+                    "Text": "Examine the radio",
+                    "Target": "Radio Room"
+                },
+                {
+                    "Text": "Go back to the kitchen",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+        "Radio Room": {
+            "SceneType": "Radio",
+            "Body": "You place the radio on the counter. It's an old model but looks like it might still work if you turn it on. You also notice a key lying Bbhind to the radio.",
+            "Item": {
+                "Name": "Basement Key",
+                "Effect": "This looks like it might open the basement door."
+            },
+            "RadioMessages": [
+                "You hear a strange broadcast: 'A key to the truth may be lurking close by ?",
+                "Static and white noise fills the room.",
+                "A faint voice comes through: 'A treasure is found in the loneliest one.'"
+            ],
+            "Choices": [
+                {
+                    "Text": "Go back to the kitchen",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+        "Backyard": {
+            "Body": "You're standing in the backyard. There is a basketball and a few benches here, along with a rusty basketball hoop. Not much here, however, there is a hole in the fence.",
+            "Choices": [
+                {
+                    "Text": "Enter the hole in the fence",
+                    "Target": "Hole"
+                },
+                {
+                    "Text": "Go back inside",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Hole": {
+            "Body": "You entered the hole and discovered another abandoned house. Do you want to investigate or head back to the front door?",
+            "Choices": [
+                {
+                    "Text": "Front door",
+                    "Target": "Front Door"
+                },
+                {
+                    "Text": "Investigate the house",
+                    "Target": "Hallway Choice"
+                }
+            ]
+        },
+        "Hallway Choice": {
+            "Body": "You have entered a mystery house not knowing what is in store. The house is huge - the biggest house you have ever seen. There are 5 hallways to choose from.",
+            "Choices": [
+                {
+                    "Text": "Hallway 1",
+                    "Target": "Hallway 1"
+                },
+                {
+                    "Text": "Hallway 2",
+                    "Target": "Hallway 2"
+                },
+                {
+                    "Text": "Hallway 3",
+                    "Target": "Hallway 3"
+                },
+                {
+                    "Text": "Hallway 4",
+                    "Target": "Hallway 4"
+                },
+                {
+                    "Text": "Hallway 5",
+                    "Target": "Hallway 5"
+                }
+            ]
+        },
+        "Hallway 1": {
+            "Body": "You chose Hallway 1. It leads to stairs that brings you to the roof of the house. You find a map on the roof that shows you the way to 100 thousand dollars that is hidden in the house. It says you need to go back and take Hallway 2 to get the money.",
+            "Choices": [
+                {
+                    "Text": "Go back and take Hallway 2",
+                    "Target": "Hallway 2 With Map"
+                }
+            ]
+        },
+        "Hallway 2": {
+            "Body": "You chose Hallway 2. You run down the Hallway and you see a farm house.",
+            "Choices": [
+                {
+                    "Text": "Enter the farm house",
+                    "Target": "Farm House 2"
+                }
+            ]
+        },
+        "Hallway 2 With Map": {
+            "Body": "You go down Hallway 2 with the map in hand and soon reach a farm house.",
+            "Choices": [
+                {
+                    "Text": "Enter the farm house",
+                    "Target": "Farm House"
+                }
+            ]
+        },
+        "Farm House": {
+            "Body": "The farm house has many animals. You hear many different sounds - distant screaming and insects buzzing. Ignoring these, you keep following the map.",
+            "Choices": [
+                {
+                    "Text": "Continue following the map",
+                    "Target": "Continue Map Trail"
+                }
+            ]
+        },
+        "Continue Map Trail": {
+            "Body": "The map says there is a secret passage way in the farm house, and you can access it by removing a loose floor board and jumping down to the basement.",
+            "Choices": [
+                {
+                    "Text": "Find the loose board and jump to the basement",
+                    "Target": "Basement"
+                }
+            ]
+        },
+        "Farm House 2": {
+            "Body": "You enter the farm house and see a bunch of animals and an exit. You see a small key on a hook by the door. You decide to exit to the backyard because you found nothing else of value.",
+            "Item": {
+                "Name": "Basement Key",
+                "Effect": "This looks like a key to an interior door, possibly the basement."
+            },
+            "Choices": [
+                {
+                    "Text": "Go to the backyard",
+                    "Target": "Backyard 2"
+                }
+            ]
+        },
+        "Backyard 2": {
+            "Body": "You enter the backyard and find a man sleeping on a rocking chair and three dogs that immediately attack you. You don't have any time to defend yourself. GAME OVER!",
+            "Choices": [
+                {
+                    "Text": "Start over",
+                    "Target": "Front Door"
+                }
+            ]
+        },
+        "Basement Stairs": {
+            "SceneType": "DarkRoom",
+            "Body": "You descend the creaky stairs into the basement. The light from the entrance quickly fades away as you reach the bottom.",
+            "DarkDescription": "It's pitch black down here. You can't see anything and it's dangerous to proceed without light. You should find a flashlight first.",
+            "DarkExit": "Living Room",
+            "Choices": [
+                {
+                    "Text": "Enter the basement",
+                    "Target": "Basement"
+                },
+                {
+                    "Text": "Go back upstairs",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "It's too dark! Start over.",
+                    "Target": "Front Door"
+                }
+            ]
+        },
+        "Basement": {
+            "Body": "You are in the basement, using your flashlight to look around. You are presented with three ropes which you have to choose from. The map wrote 'The loneliest rope is the jolliest rope.' You notice that Rope 3 is slightly separated from the other two.",
+            "Choices": [
+                {
+                    "Text": "Pull Rope 1",
+                    "Target": "Rope 1"
+                },
+                {
+                    "Text": "Pull Rope 2",
+                    "Target": "Rope 2"
+                },
+                {
+                    "Text": "Pull Rope 3",
+                    "Target": "Rope 3"
+                },
+                {
+                    "Text": "Look around",
+                    "Target": "Look Around"
+                }
+            ]
+        },
+        "Rope 1": {
+            "Body": "You chose rope 1. A ceiling fan came falling down and crushed you completely. GAME OVER!",
+            "Choices": [
+                {
+                    "Text": "Start over",
+                    "Target": "Front Door"
+                }
+            ]
+        },
+        "Rope 2": {
+            "Body": "You chose rope 2. A strange liquid falls from the ceiling and lands right on you. You start to feel immense pain and realize it is acid. You slowly dissolve. GAME OVER!",
+            "Choices": [
+                {
+                    "Text": "Start over",
+                    "Target": "Front Door"
+                }
+            ]
+        },
+        "Rope 3": {
+            "Body": "You chose rope 3. Suddenly a chest falls from the roof with the money! You realized that Rope 3 was spaced farther apart from ropes 1 and 2 and now understand what the map meant by 'Loneliest.' YOU WIN!",
+            "Choices": [
+                {
+                    "Text": "Thank you for playing!",
+                    "Target": "Thank You"
+                }
+            ]
+        },
+        "Look Around": {
+            "Body": "You looked around and didn't find anything. You kept looking until eventually... You hear police sirens and then you hear a police officer barge through the door. He arrests you and removes you from the premises. As you leave you see two people being arrested with you and being thrown into a cop car and they throw you in there as well. GAME OVER!",
+            "Choices": [
+                {
+                    "Text": "Start over",
+                    "Target": "Front Door"
+                }
+            ]
+        },
+        "Hallway 3": {
+            "Body": "You chose Hallway 3. It leads to a bedroom.",
+            "Choices": [
+                {
+                    "Text": "Enter the bedroom",
+                    "Target": "Bedroom"
+                }
+            ]
+        },
+        "Bedroom": {
+            "Body": "You enter the bedroom and see an empty bed. Then the door slams behind you! You turn around to see what looks like someone holding something in their hand. BANG!! GAME OVER!",
+            "Choices": [
+                {
+                    "Text": "Start over",
+                    "Target": "Front Door"
+                }
+            ]
+        },
+        "Hallway 4": {
+            "Body": "You chose Hallway 4. This hallway is incredibly long for some reason. You make your way all the way to the end - it takes about 5 minutes. You see a room that says: 'Chemicals beware'. The door is locked so you have to kick it open to get in.",
+            "Choices": [
+                {
+                    "Text": "Kick the door open",
+                    "Target": "Chemical Room"
+                }
+            ]
+        },
+        "Chemical Room": {
+            "Body": "You get in but the lights are off. You see a light switch on the wall.",
+            "SceneType": "DarkRoom",
+            "DarkDescription": "It's too dark to see anything clearly. You need a light source to safely explore this room.",
+            "DarkExit": "Front Door",
+            "DarkExitText": "You got scared and decided to leave the mansion.",
+            "Choices": [
+                {
+                    "Text": "Turn on the switch",
+                    "Target": "Switch"
+                },
+                {
+                    "Text": "Go back to the hallway",
+                    "Target": "Hallway Choice"
+                }
+            ]
+        },
+        "Switch": {
+            "Body": "You turn on the switch to see a bunch of medieval weapons like swords, shields, and spears. You also see a ton of test tubes with different colored liquids. You walk past all of them and see a door with a big red X on it.",
+            "Choices": [
+                {
+                    "Text": "Enter the door with the X",
+                    "Target": "X Door"
+                }
+            ]
+        },
+        "X Door": {
+            "Body": "You enter and to your shock you see a bunch of human remains and skeletons scattered all over the walls and floor. You immediately run out of the house and call 911. The police arrive and arrest 2 people in the house and thank you for calling them. ALTERNATIVE WIN!",
+            "Choices": [
+                {
+                    "Text": "Thank you for playing!",
+                    "Target": "Thank You"
+                }
+            ]
+        },
+        "Hallway 5": {
+            "Body": "You chose Hallway 5. The hallway leads to a random room. You enter it.",
+            "Choices": [
+                {
+                    "Text": "Explore the room",
+                    "Target": "Empty Room"
+                }
+            ]
+        },
+        "Empty Room": {
+            "Body": "You entered the random room. It is completely empty with nothing to interact with. It is a dead end so you must go back.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Hallway Choice"
+                }
+            ]
+        },
+        "Thank You": {
+            "Body": "You got one of the two good endings. Try and find the other good ending!",
+            "Choices": [
+                {
+                    "Text": "Play again",
+                    "Target": "Front Door"
+                }
+            ]
+        }
+    }
+}
